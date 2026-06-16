@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Physics Marks: ");
+        double physics = sc.nextDouble();
+        System.out.print("Chemistry Marks: ");
+        double chemistry = sc.nextDouble();
+        System.out.print("Maths Marks: ");
+        double maths = sc.nextDouble();
+
+        double percentage = (physics + chemistry + maths) / 3;
+        System.out.println("Percentage = " + percentage);
+
+        if (percentage >= 90)
+            System.out.println("Grade A");
+        else if (percentage >= 75)
+            System.out.println("Grade B");
+        else if (percentage >= 50)
+            System.out.println("Grade C");
+        else
+            System.out.println("Grade F");
+
+        sc.close();
+    }
+}
